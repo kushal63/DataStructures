@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Solution {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println();
+		int n = sc.nextInt();
+		long result = findnthFibanocci(n);
+		System.out.println(result);
+	}
+	public static long findnthFibanocci(int n) {
+		if (n == 1 || n == 2) {
+			return 1;
+		} else {
+			long prev = 1;
+			long current = 1;
+			long next = 0;
+			for (int i = 3; i <= n; i++) {
+				next = prev + current;
+				prev = current;
+				current = next;
+			}
+			return current;
+		}
+	}
+}
