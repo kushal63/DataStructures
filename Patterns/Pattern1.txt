@@ -1,0 +1,30 @@
+Output:
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+Code : 
+
+class Solution {
+
+    void printSquare(int n) {
+        // code here
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+         int n = 7;
+        solution.printSquare(n);
+    }
+}
+
+
+
+
